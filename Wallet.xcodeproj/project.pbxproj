@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2290E7D42141484500662C7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E7D32141484500662C7C /* AppDelegate.swift */; };
-		2290E7D62141484500662C7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E7D52141484500662C7C /* ViewController.swift */; };
-		2290E7D92141484500662C7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2290E7D72141484500662C7C /* Main.storyboard */; };
 		2290E7DB2141484700662C7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2290E7DA2141484700662C7C /* Assets.xcassets */; };
 		2290E7DE2141484700662C7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2290E7DC2141484700662C7C /* LaunchScreen.storyboard */; };
 		2290E7E92141484700662C7C /* WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E7E82141484700662C7C /* WalletTests.swift */; };
 		2290E7F42141484700662C7C /* WalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E7F32141484700662C7C /* WalletUITests.swift */; };
+		2290E80B21414F5500662C7C /* MWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E80A21414F5500662C7C /* MWViewController.swift */; };
+		2290E80D21414F7700662C7C /* MWNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E80C21414F7700662C7C /* MWNavigationController.swift */; };
+		2290E80F21414F9800662C7C /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E80E21414F9800662C7C /* RootNavigationController.swift */; };
+		2290E81121414FBB00662C7C /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E81021414FBB00662C7C /* RootTabBarController.swift */; };
+		2290E81321414FE300662C7C /* Instances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E81221414FE300662C7C /* Instances.swift */; };
+		2290E81521414FF600662C7C /* MWConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E81421414FF600662C7C /* MWConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +40,6 @@
 /* Begin PBXFileReference section */
 		2290E7D02141484500662C7C /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2290E7D32141484500662C7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2290E7D52141484500662C7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2290E7D82141484500662C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2290E7DA2141484700662C7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2290E7DD2141484700662C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2290E7DF2141484700662C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +49,12 @@
 		2290E7EF2141484700662C7C /* WalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2290E7F32141484700662C7C /* WalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletUITests.swift; sourceTree = "<group>"; };
 		2290E7F52141484700662C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2290E80A21414F5500662C7C /* MWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWViewController.swift; sourceTree = "<group>"; };
+		2290E80C21414F7700662C7C /* MWNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWNavigationController.swift; sourceTree = "<group>"; };
+		2290E80E21414F9800662C7C /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
+		2290E81021414FBB00662C7C /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		2290E81221414FE300662C7C /* Instances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instances.swift; sourceTree = "<group>"; };
+		2290E81421414FF600662C7C /* MWConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,19 @@
 		2290E7D22141484500662C7C /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				2290E80521414EF100662C7C /* Assets */,
+				2290E80421414EE100662C7C /* User Interface */,
+				2290E80321414EDA00662C7C /* Helpers */,
+				2290E8022141489100662C7C /* Localizations */,
+				2290E8012141488700662C7C /* Networking */,
 				2290E7D32141484500662C7C /* AppDelegate.swift */,
-				2290E7D52141484500662C7C /* ViewController.swift */,
-				2290E7D72141484500662C7C /* Main.storyboard */,
 				2290E7DA2141484700662C7C /* Assets.xcassets */,
 				2290E7DC2141484700662C7C /* LaunchScreen.storyboard */,
 				2290E7DF2141484700662C7C /* Info.plist */,
+				2290E80E21414F9800662C7C /* RootNavigationController.swift */,
+				2290E81021414FBB00662C7C /* RootTabBarController.swift */,
+				2290E81221414FE300662C7C /* Instances.swift */,
+				2290E81421414FF600662C7C /* MWConfig.swift */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -123,6 +138,75 @@
 				2290E7F52141484700662C7C /* Info.plist */,
 			);
 			path = WalletUITests;
+			sourceTree = "<group>";
+		};
+		2290E8012141488700662C7C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2290E8022141489100662C7C /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localizations;
+			sourceTree = "<group>";
+		};
+		2290E80321414EDA00662C7C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2290E80421414EE100662C7C /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				2290E80921414F0D00662C7C /* Base */,
+				2290E80821414F0700662C7C /* Constants */,
+				2290E80721414F0200662C7C /* Main */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		2290E80521414EF100662C7C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2290E80621414EFA00662C7C /* Fonts */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		2290E80621414EFA00662C7C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2290E80721414F0200662C7C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2290E80821414F0700662C7C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		2290E80921414F0D00662C7C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2290E80A21414F5500662C7C /* MWViewController.swift */,
+				2290E80C21414F7700662C7C /* MWNavigationController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +315,6 @@
 			files = (
 				2290E7DE2141484700662C7C /* LaunchScreen.storyboard in Resources */,
 				2290E7DB2141484700662C7C /* Assets.xcassets in Resources */,
-				2290E7D92141484500662C7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +339,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2290E7D62141484500662C7C /* ViewController.swift in Sources */,
+				2290E80B21414F5500662C7C /* MWViewController.swift in Sources */,
+				2290E81121414FBB00662C7C /* RootTabBarController.swift in Sources */,
+				2290E81521414FF600662C7C /* MWConfig.swift in Sources */,
 				2290E7D42141484500662C7C /* AppDelegate.swift in Sources */,
+				2290E80F21414F9800662C7C /* RootNavigationController.swift in Sources */,
+				2290E81321414FE300662C7C /* Instances.swift in Sources */,
+				2290E80D21414F7700662C7C /* MWNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +381,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2290E7D72141484500662C7C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2290E7D82141484500662C7C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2290E7DC2141484700662C7C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
