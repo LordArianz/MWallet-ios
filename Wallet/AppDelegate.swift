@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Wallet
 //
-//  Created by S.Morteza Ezzabady on 9/6/18.
-//  Copyright © 2018 S.Morteza Ezzabady. All rights reserved.
+//  Created by Ebrahim Tahernejad on 9/6/18.
+//  Copyright © 2018 Ebrahim Tahernejad. All rights reserved.
 //
 
 import UIKit
