@@ -18,3 +18,11 @@
 "WT.Balance.Title" = "موجودی";
 "WT.Factors.Title" = "فاکتورها";
 "WT.Factors.Show.More" = "مشاهده همه";
+"WT.Card.Detail.ExpireDate" = "تاریخ انقضا:";
+"WT.Card.Detail.CVV2" = "CVV2:";
+"WT.Card.BankName.Base" = "بانک";
+"WT.Card.BankName.saderat" = "صادرات";
+"WT.Card.BankName.mellat" = "ملت";
+"WT.Card.BankName.parsian" = "پارسیان";
+"WT.Card.BankName.none" = "ناشناخته";
+
