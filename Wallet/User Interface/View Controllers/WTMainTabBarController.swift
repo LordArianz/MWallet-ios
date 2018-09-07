@@ -35,7 +35,7 @@ class WTMainTabBarController: UITabBarController {
             self.selectedIndex = index
             print("hola amigos")
         }
-        self.viewControllers = [WTMainNavigationController(rootViewController: WTProfileViewController()),
+        self.viewControllers = [WTMainNavigationController(rootViewController: WTServiceViewController()),
                                 WTMainNavigationController(),
                                 WTMainNavigationController(rootViewController: WTScanViewController()),
                                 WTMainNavigationController(rootViewController: WTWalletViewController()),

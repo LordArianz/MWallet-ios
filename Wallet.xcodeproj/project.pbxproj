@@ -14,6 +14,7 @@
 		2290E8212142EA4800662C7C /* WTGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E8202142EA4800662C7C /* WTGridLayout.swift */; };
 		2290E8232142EAC200662C7C /* WTWalletServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E8222142EAC200662C7C /* WTWalletServiceCell.swift */; };
 		2290E8252142F0B300662C7C /* WTSimpleFactorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E8242142F0B300662C7C /* WTSimpleFactorCell.swift */; };
+		2290E8282143204600662C7C /* WTServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E8272143204600662C7C /* WTServiceCell.swift */; };
 		3D3B79922142EE87007B2F01 /* HideKB+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3B79912142EE87007B2F01 /* HideKB+UIViewController.swift */; };
 		3D6B34AB21415629009098F0 /* WTAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6B34AA21415629009098F0 /* WTAppDelegate.swift */; };
 		3D6B34BD21415DFB009098F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6B34BC21415DFB009098F0 /* LaunchScreen.xib */; };
@@ -73,6 +74,7 @@
 		2290E8202142EA4800662C7C /* WTGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTGridLayout.swift; sourceTree = "<group>"; };
 		2290E8222142EAC200662C7C /* WTWalletServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTWalletServiceCell.swift; sourceTree = "<group>"; };
 		2290E8242142F0B300662C7C /* WTSimpleFactorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTSimpleFactorCell.swift; sourceTree = "<group>"; };
+		2290E8272143204600662C7C /* WTServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTServiceCell.swift; sourceTree = "<group>"; };
 		3D3B79912142EE87007B2F01 /* HideKB+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HideKB+UIViewController.swift"; sourceTree = "<group>"; };
 		3D6B34A721415629009098F0 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6B34AA21415629009098F0 /* WTAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTAppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +168,14 @@
 				2290E81E2142E94600662C7C /* WTWalletServicesCell.swift */,
 				2290E8222142EAC200662C7C /* WTWalletServiceCell.swift */,
 				2290E8242142F0B300662C7C /* WTSimpleFactorCell.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		2290E8262143201600662C7C /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				2290E8272143204600662C7C /* WTServiceCell.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -300,6 +310,7 @@
 		3D7F16112141BB100011490A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2290E8262143201600662C7C /* Items */,
 				3D7F16122141BB2F0011490A /* WTServiceViewController.swift */,
 			);
 			path = Service;
@@ -552,6 +563,7 @@
 				3D7F161F2141D9510011490A /* WTCardCozyCell.swift in Sources */,
 				3D7F164021429A7F0011490A /* WTAddCardViewController.swift in Sources */,
 				2290E8252142F0B300662C7C /* WTSimpleFactorCell.swift in Sources */,
+				2290E8282143204600662C7C /* WTServiceCell.swift in Sources */,
 				3D3B79922142EE87007B2F01 /* HideKB+UIViewController.swift in Sources */,
 				3D7F164A2142C3C20011490A /* WTCardDataDateInputCell.swift in Sources */,
 				3D7F160521417D130011490A /* WTColor.swift in Sources */,
