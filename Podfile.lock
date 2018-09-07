@@ -1,4 +1,5 @@
 PODS:
+  - QRCodeReader.swift (8.2.0)
   - Realm (3.7.6):
     - Realm/Headers (= 3.7.6)
   - Realm/Headers (3.7.6)
@@ -7,25 +8,32 @@ PODS:
   - RxCocoa (4.2.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
+  - UIColor_Hex_Swift (4.0.2)
 
 DEPENDENCIES:
-  - RealmSwift
-  - RxCocoa
-  - RxSwift
+  - QRCodeReader.swift (~> 8.2.0)
+  - RealmSwift (~> 3.7.6)
+  - RxCocoa (~> 4.2.0)
+  - RxSwift (~> 4.2.0)
+  - UIColor_Hex_Swift (~> 4.0.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - QRCodeReader.swift
     - Realm
     - RealmSwift
     - RxCocoa
     - RxSwift
+    - UIColor_Hex_Swift
 
 SPEC CHECKSUMS:
+  QRCodeReader.swift: 003eb32f18a5a675b936ec82ba0ff368cddbff45
   Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
   RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  UIColor_Hex_Swift: 2fb123c7d864994a5137ef57c4dc55e17a657d29
 
-PODFILE CHECKSUM: b7f4b29751df24aafea962ddb24693e34d4f9582
+PODFILE CHECKSUM: 882d88deaf09562816fbfb98cd47ea6a25559c42
 
 COCOAPODS: 1.5.3

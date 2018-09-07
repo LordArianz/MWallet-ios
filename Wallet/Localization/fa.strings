@@ -1,0 +1,16 @@
+/* 
+  fa.strings
+  Wallet
+
+  Created by Ebrahim Tahernejad on 9/7/18.
+  Copyright © 2018 Ebrahim Tahernejad. All rights reserved.
+*/
+
+"WT.Tab.Cards" = "کارت ها";
+"WT.Currency" = "تومان";
+"WT.Scan.QRCode" = "QRCode";
+"WT.Scan.NFC" = "NFC";
+"WT.Scan.NFC.Text" = "جهت مشاهده فاکتور و انجام تراکنش تلفن همراه خود را با دستگاه NFC تماس دهید.";
+"WT.Card.Add.Title" = "افزودن کارت جدید";
+"WT.Card.Add.Cancel" = "انصراف";
+"WT.Card.Add" = "ثبت کارت";
