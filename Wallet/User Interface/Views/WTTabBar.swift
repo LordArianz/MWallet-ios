@@ -119,8 +119,10 @@ class WTTabBar: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         var containerHeight: CGFloat = self.frame.size.height
+        print("now \(containerHeight)")
         if #available(iOS 11.0, *) {
             containerHeight -= AppDelegate.window!.safeAreaInsets.bottom
+            print("now after \(containerHeight)")
         }
         container.frame = CGRect(x: 0, y: 0,
                                  width: self.frame.size.width,
