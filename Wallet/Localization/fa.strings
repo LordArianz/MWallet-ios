@@ -14,3 +14,11 @@
 "WT.Card.Add.Title" = "افزودن کارت جدید";
 "WT.Card.Add.Cancel" = "انصراف";
 "WT.Card.Add" = "ثبت کارت";
+"WT.Card.Detail.ExpireDate" = "تاریخ انقضا:";
+"WT.Card.Detail.CVV2" = "CVV2:";
+"WT.Card.BankName.Base" = "بانک";
+"WT.Card.BankName.saderat" = "صادرات";
+"WT.Card.BankName.mellat" = "ملت";
+"WT.Card.BankName.parsian" = "پارسیان";
+"WT.Card.BankName.none" = "ناشناخته";
+

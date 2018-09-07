@@ -40,8 +40,8 @@ class WTCardPreviewCell: UITableViewCell {
     let cardNo: UILabel = UILabel()
     
     var values: WTCardPreviewValues =
-        WTCardPreviewValues(cardNumber: "XXXX     XXXX     XXXX     XXXX",
-                            expDate: "-/-", cvv2: "-")
+        WTCardPreviewValues(cardNumber: "6037     6974     XXXX     XXXX",
+                            expDate: "97/18", cvv2: "1336")
     
     func bankTypeSet(){
         let style: WTBankCardStyle = WTBankCardStyles[values.type]!
@@ -55,19 +55,24 @@ class WTCardPreviewCell: UITableViewCell {
                 self.name.alpha = 1
             }
         }
+        self.cardNo.text = values.cardNumber.localizedFormat
+        self.cvv2Value.text = values.cvv2.localizedFormat
+        self.expDateValue.text = values.expDate.localizedFormat
+        self.name.text = String.localized("WT.Card.BankName.Base") + " " + String.localized("WT.Card.BankName." + values.type.rawValue)
+        self.logo.image =
+            UIImage(named: "icon-bank-card-\(values.type.rawValue)")?
+                .withRenderingMode(.alwaysTemplate)
+        layoutSubviews()
     }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.layer.addSublayer(gradientLayer)
-        self.addSubview(name)
-        self.addSubview(logo)
-        self.addSubview(cardNo)
-        self.addSubview(expDateTitle)
-        self.addSubview(expDateValue)
-        self.addSubview(cvv2Title)
-        self.addSubview(cvv2Value)
+        selectionStyle = .none
+        
+        gradientLayer.locations = [0, 1]
+        gradientLayer.startPoint = .zero
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
         
         cvv2Title.alpha = 0.5
         expDateTitle.alpha = 0.5
@@ -82,14 +87,38 @@ class WTCardPreviewCell: UITableViewCell {
         
         cardNo.font = UIFont.get(.main, weight: .medium, size: 18)
         
+        cvv2Title.text = String.localized("WT.Card.Detail.CVV2")
+        expDateTitle.text = String.localized("WT.Card.Detail.ExpireDate")
+        
+        name.textColor = WTColor.wt_DarkCardText
+        expDateTitle.textColor = name.textColor
+        cvv2Title.textColor = name.textColor
+        expDateValue.textColor = name.textColor
+        cvv2Value.textColor = name.textColor
+        cardNo.textColor = name.textColor
+        logo.tintColor = name.textColor
+        
+        self.layer.addSublayer(gradientLayer)
+        self.addSubview(name)
+        self.addSubview(logo)
+        self.addSubview(cardNo)
+        self.addSubview(expDateTitle)
+        self.addSubview(expDateValue)
+        self.addSubview(cvv2Title)
+        self.addSubview(cvv2Value)
+        
+        bankTypeSet()
     }
     required init?(coder aDecoder: NSCoder) {fatalError("init(coder:) has not been implemented")}
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        gradientLayer.frame = CGRect(x: 20, y: 20,
-                                     width: self.frame.size.width - 40,
-                                     height: self.frame.size.height - 30)
+        CALayer.performWithoutAnimation { [unowned self] () in
+            self.gradientLayer.frame =
+                CGRect(x: 20, y: 10,
+                       width: self.frame.size.width - 40,
+                       height: self.frame.size.height - 20)
+        }
         logo.frame.size = CGSize(width: 30, height: 30)
         name.sizeToFit()
         cardNo.sizeToFit()
@@ -97,7 +126,19 @@ class WTCardPreviewCell: UITableViewCell {
         expDateTitle.sizeToFit()
         cvv2Value.sizeToFit()
         cvv2Title.sizeToFit()
-        name.center = CGPoint(x: 20 + gradientLayer.frame.size.width / 2, y: 20 + gradientLayer.frame.size.height / 2)
+        cardNo.center = CGPoint(x: 20 + gradientLayer.frame.size.width / 2, y: 10 + gradientLayer.frame.size.height / 2)
+        logo.frame.origin = CGPoint(x: gradientLayer.frame.size.width + 20 - 18 - logo.frame.size.width,
+                                    y: 20 + 10)
+        name.center.y = logo.center.y
+        name.frame.origin.x = logo.frame.origin.x - 14.5 - name.frame.size.width
+        let bottom: CGFloat = gradientLayer.frame.size.height + 10
+        cvv2Title.frame.origin = CGPoint(x: 20 + 31, y: bottom - 20 - cvv2Title.frame.size.height)
+        cvv2Value.center.y = cvv2Title.center.y
+        cvv2Value.frame.origin.x = cvv2Title.frame.origin.x + cvv2Title.frame.size.width + 5
+        expDateTitle.center.y = cvv2Title.center.y
+        expDateTitle.frame.origin.x = gradientLayer.frame.size.width + 20 - 31 - expDateTitle.frame.size.width
+        expDateValue.center.y = cvv2Title.center.y
+        expDateValue.frame.origin.x = expDateTitle.frame.origin.x - expDateValue.frame.size.width - 2
     }
     
 }
