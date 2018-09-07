@@ -89,4 +89,8 @@ class WTColor {
     @nonobjc class var wt_walletValue: UIColor {
         return UIColor(white: 77.0 / 255.0, alpha: 1.0)
     }
+    
+    @nonobjc class var wt_factorValue: UIColor {
+        return UIColor(red: 208.0 / 255.0, green: 2.0 / 255.0, blue: 27.0 / 255.0, alpha: 1.0)
+    }
 }
