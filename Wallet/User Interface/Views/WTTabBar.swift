@@ -131,7 +131,7 @@ class WTTabBar: UIView {
         print(width)
         var x: CGFloat = 0
         for subview in container.subviews {
-            subview.frame = CGRect(x: x, y: 0, width: width, height: self.frame.size.height)
+            subview.frame = CGRect(x: x, y: 0, width: width, height: containerHeight)
             x += width
         }
         let mid: UIView = container.subviews[Int(buttons.count / 2)]
