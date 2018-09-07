@@ -153,6 +153,7 @@ class WTAddCardViewController: WTViewController, UITableViewDataSource, UITableV
         var doneHeight: CGFloat = 59
         if #available(iOS 11.0, *) {
             doneHeight += AppDelegate.window!.safeAreaInsets.bottom
+            doneBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: AppDelegate.window!.safeAreaInsets.bottom, right: 0)
         }
         doneBtn.frame = CGRect(x: 0, y: rootView.frame.size.height - doneHeight, width: rootView.frame.size.width, height: doneHeight)
         tableView.frame.size = CGSize(width: rootView.frame.size.width, height: rootView.frame.size.height - tableView.frame.origin.y - doneHeight)
