@@ -38,7 +38,7 @@ class WTMainTabBarController: UITabBarController {
         self.viewControllers = [WTMainNavigationController(rootViewController: WTProfileViewController()),
                                 WTMainNavigationController(),
                                 WTMainNavigationController(rootViewController: WTScanViewController()),
-                                WTMainNavigationController(),
+                                WTMainNavigationController(rootViewController: WTWalletViewController()),
                                 WTMainNavigationController(rootViewController: WTCardsViewController())]
     }
     convenience init() { self.init(nibName: nil, bundle: nil) }

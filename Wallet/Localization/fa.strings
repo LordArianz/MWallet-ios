@@ -7,6 +7,7 @@
 */
 
 "WT.Tab.Cards" = "کارت ها";
+"WT.Tab.Wallet" = "کیف پول";
 "WT.Currency" = "تومان";
 "WT.Scan.QRCode" = "QRCode";
 "WT.Scan.NFC" = "NFC";
@@ -14,3 +15,6 @@
 "WT.Card.Add.Title" = "افزودن کارت جدید";
 "WT.Card.Add.Cancel" = "انصراف";
 "WT.Card.Add" = "ثبت کارت";
+"WT.Balance.Title" = "موجودی";
+"WT.Factors.Title" = "فاکتورها";
+"WT.Factors.Show.More" = "مشاهده همه";

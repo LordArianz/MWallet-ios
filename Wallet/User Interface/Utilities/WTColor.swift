@@ -81,4 +81,12 @@ class WTColor {
     @nonobjc class var wt_ParentVCBackground: UIColor {
         return UIColor(white: 0.0, alpha: 0.35)
     }
+    
+    @nonobjc class var wt_walletTitle: UIColor {
+        return UIColor(white: 164.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var wt_walletValue: UIColor {
+        return UIColor(white: 77.0 / 255.0, alpha: 1.0)
+    }
 }

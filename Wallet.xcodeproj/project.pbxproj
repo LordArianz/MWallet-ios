@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2290E8182142DCF000662C7C /* WTWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E8172142DCF000662C7C /* WTWalletViewController.swift */; };
+		2290E81B2142E03300662C7C /* WTBalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E81A2142E03300662C7C /* WTBalanceCell.swift */; };
+		2290E81D2142E5C000662C7C /* WTFactorsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E81C2142E5C000662C7C /* WTFactorsHeaderCell.swift */; };
+		2290E81F2142E94600662C7C /* WTWalletServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E81E2142E94600662C7C /* WTWalletServicesCell.swift */; };
+		2290E8212142EA4800662C7C /* WTGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E8202142EA4800662C7C /* WTGridLayout.swift */; };
+		2290E8232142EAC200662C7C /* WTWalletServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E8222142EAC200662C7C /* WTWalletServiceCell.swift */; };
+		2290E8252142F0B300662C7C /* WTSimpleFactorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E8242142F0B300662C7C /* WTSimpleFactorCell.swift */; };
 		3D6B34AB21415629009098F0 /* WTAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6B34AA21415629009098F0 /* WTAppDelegate.swift */; };
 		3D6B34BD21415DFB009098F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6B34BC21415DFB009098F0 /* LaunchScreen.xib */; };
 		3D6B34C221415F85009098F0 /* WTBankCardStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6B34C121415F85009098F0 /* WTBankCardStyles.swift */; };
@@ -58,6 +65,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2290E8172142DCF000662C7C /* WTWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTWalletViewController.swift; sourceTree = "<group>"; };
+		2290E81A2142E03300662C7C /* WTBalanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTBalanceCell.swift; sourceTree = "<group>"; };
+		2290E81C2142E5C000662C7C /* WTFactorsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTFactorsHeaderCell.swift; sourceTree = "<group>"; };
+		2290E81E2142E94600662C7C /* WTWalletServicesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTWalletServicesCell.swift; sourceTree = "<group>"; };
+		2290E8202142EA4800662C7C /* WTGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTGridLayout.swift; sourceTree = "<group>"; };
+		2290E8222142EAC200662C7C /* WTWalletServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTWalletServiceCell.swift; sourceTree = "<group>"; };
+		2290E8242142F0B300662C7C /* WTSimpleFactorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTSimpleFactorCell.swift; sourceTree = "<group>"; };
 		3D6B34A721415629009098F0 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6B34AA21415629009098F0 /* WTAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTAppDelegate.swift; sourceTree = "<group>"; };
 		3D6B34B621415629009098F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -133,6 +147,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2290E8162142DCA700662C7C /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				2290E8192142DFB800662C7C /* Items */,
+				2290E8172142DCF000662C7C /* WTWalletViewController.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		2290E8192142DFB800662C7C /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				2290E81A2142E03300662C7C /* WTBalanceCell.swift */,
+				2290E81C2142E5C000662C7C /* WTFactorsHeaderCell.swift */,
+				2290E81E2142E94600662C7C /* WTWalletServicesCell.swift */,
+				2290E8222142EAC200662C7C /* WTWalletServiceCell.swift */,
+				2290E8242142F0B300662C7C /* WTSimpleFactorCell.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
 		3D6B349E21415629009098F0 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +236,7 @@
 		3D6B34C321416B53009098F0 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2290E8162142DCA700662C7C /* Wallet */,
 				3D7F16322142589E0011490A /* Scan */,
 				3D7F16142141BC7D0011490A /* Cards */,
 				3D7F16112141BB100011490A /* Profile */,
@@ -226,6 +262,7 @@
 				3D6B34CE21417296009098F0 /* WTFont.swift */,
 				3D7F160421417D130011490A /* WTColor.swift */,
 				3D7F160F2141B6850011490A /* UIImage+Color.swift */,
+				2290E8202142EA4800662C7C /* WTGridLayout.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -505,18 +542,24 @@
 				3D6B34AB21415629009098F0 /* WTAppDelegate.swift in Sources */,
 				3D6B34C221415F85009098F0 /* WTBankCardStyles.swift in Sources */,
 				3D7F160C21419E770011490A /* Instances.swift in Sources */,
+				2290E81B2142E03300662C7C /* WTBalanceCell.swift in Sources */,
+				2290E8212142EA4800662C7C /* WTGridLayout.swift in Sources */,
 				3D7F16482142C2DE0011490A /* WTCardDataInputCell.swift in Sources */,
 				3D7F160A2141985D0011490A /* WTTabBar.swift in Sources */,
 				3D7F161F2141D9510011490A /* WTCardCozyCell.swift in Sources */,
 				3D7F164021429A7F0011490A /* WTAddCardViewController.swift in Sources */,
+				2290E8252142F0B300662C7C /* WTSimpleFactorCell.swift in Sources */,
 				3D7F164A2142C3C20011490A /* WTCardDataDateInputCell.swift in Sources */,
 				3D7F160521417D130011490A /* WTColor.swift in Sources */,
 				3D7F16272141DEE70011490A /* Number+Seperator.swift in Sources */,
+				2290E8182142DCF000662C7C /* WTWalletViewController.swift in Sources */,
 				3D7F163B214260B50011490A /* WTSelector.swift in Sources */,
 				3D7F16312141F62F0011490A /* WTUser.swift in Sources */,
 				3D7F16102141B6850011490A /* UIImage+Color.swift in Sources */,
 				3D7F16232141DB780011490A /* WTCardHeaderCell.swift in Sources */,
+				2290E81F2142E94600662C7C /* WTWalletServicesCell.swift in Sources */,
 				3D7F16252141DD740011490A /* WTConfig.swift in Sources */,
+				2290E8232142EAC200662C7C /* WTWalletServiceCell.swift in Sources */,
 				3D7F16292141E0390011490A /* UIView+Shadow+Corner+Border.swift in Sources */,
 				3D7F1634214258C70011490A /* WTScanViewController.swift in Sources */,
 				3D6B34CA214170B4009098F0 /* WTNavigationController.swift in Sources */,
@@ -532,6 +575,7 @@
 				3D6B34CF21417296009098F0 /* WTFont.swift in Sources */,
 				3D6B34C721416B8F009098F0 /* WTMainTabBarController.swift in Sources */,
 				3D7F16212141DAEF0011490A /* WTCardCompactCell.swift in Sources */,
+				2290E81D2142E5C000662C7C /* WTFactorsHeaderCell.swift in Sources */,
 				3D7F16452142C2C40011490A /* WTCardPreviewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
