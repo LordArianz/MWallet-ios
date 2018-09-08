@@ -38,7 +38,7 @@ class WTServiceViewController: WTViewController, UICollectionViewDelegate, UICol
             self.view.addSubview(view)
             
             let title: UILabel = UILabel()
-            title.text = titles[i]
+            title.text = titles?[i]
             title.textColor = UIColor.black
             title.font = UIFont.get(.main, weight: .medium, size: 14)
             view.addSubview(title)
