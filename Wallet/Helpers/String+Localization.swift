@@ -26,5 +26,10 @@ extension String {
         .replacingOccurrences(of: "8", with: "۸")
         .replacingOccurrences(of: "9", with: "۹")
     }
+    var isNumeric: Bool {
+        guard self.characters.count > 0 else { return true }
+        let nums: Set<Character> = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        return Set(self.characters).isSubset(of: nums)
+    }
 }
 

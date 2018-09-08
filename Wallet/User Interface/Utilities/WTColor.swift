@@ -89,4 +89,8 @@ class WTColor {
     @nonobjc class var wt_walletValue: UIColor {
         return UIColor(white: 77.0 / 255.0, alpha: 1.0)
     }
+    
+    @nonobjc class var wt_TableSeperator: UIColor {
+        return UIColor(white: 235.0 / 255.0, alpha: 1.0)
+    }
 }

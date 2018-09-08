@@ -19,10 +19,46 @@ class WTAddCardViewController: WTViewController, UITableViewDataSource, UITableV
     var doneBtn: UIButton!
     var fingerPrintBtn: UIButton!
     
-    var previewCell: WTCardPreviewCell?
+    var cardPreviewCell: WTCardPreviewCell?
+    var cardNumberCell: WTCardDataInputCell?
+    var cardCVV2Cell: WTCardDataInputCell?
+    var cardDateCell: WTCardDataInputCell?
+    
+    var onChange: ((WTCardDataInputCell) -> ())?
     
     override func loadView() {
         super.loadView()
+        
+        self.onChange = { [unowned self] (cell) in
+            if cell == self.cardDateCell {
+                let month = self.cardDateCell?.fields[1].text ?? "-"
+                let year = self.cardDateCell?.fields[0].text ?? "-"
+                self.cardPreviewCell?.values.expDate = year.localizedFormat + "/" + month.localizedFormat
+            } else if cell == self.cardCVV2Cell {
+                self.cardPreviewCell?.values.cvv2
+                    = (self.cardCVV2Cell?.fields[0].text ?? "-").localizedFormat
+            } else if cell == self.cardNumberCell {
+                let tmp1: String
+                    = (self.cardNumberCell?.fields[3].text ?? "")
+                        + (self.cardNumberCell?.fields[2].text ?? "")
+                let tmp2: String
+                    = (self.cardNumberCell?.fields[1].text ?? "")
+                        + (self.cardNumberCell?.fields[0].text ?? "")
+                var tmp = tmp1 + tmp2 // Swift error: Complex Expression??!!!!!!!
+                if tmp.characters.count == 16 {
+                    let tmp1: String
+                        = (self.cardNumberCell?.fields[3].text ?? "") + "     "
+                            + (self.cardNumberCell?.fields[2].text ?? "")
+                    let tmp2: String
+                        = (self.cardNumberCell?.fields[1].text ?? "") + "     "
+                            + (self.cardNumberCell?.fields[0].text ?? "")
+                    tmp = tmp1 + "     " + tmp2
+                }
+                self.cardPreviewCell?.values.cardNumber
+                    = tmp == "" ? "XXXX     XXXX     XXXX     XXXX" : tmp.localizedFormat
+            }
+            print("LOL")
+        }
         
         rootView = UIView()
         rootView.backgroundColor = WTColor.wt_BarBackground
@@ -63,6 +99,7 @@ class WTAddCardViewController: WTViewController, UITableViewDataSource, UITableV
         rootView.addSubview(tableView)
         rootView.addSubview(doneBtn)
         self.view.addSubview(rootView)
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -87,17 +124,59 @@ class WTAddCardViewController: WTViewController, UITableViewDataSource, UITableV
         if cell == nil {
             
             if indexPath.section == 0 {
-                previewCell = WTCardPreviewCell(style: .default, reuseIdentifier: reuseId)
-                cell = previewCell
+                cardPreviewCell = WTCardPreviewCell(style: .default, reuseIdentifier: reuseId)
+                cell = cardPreviewCell
             } else { // 1
                 if indexPath.row == 0 {
-                    
+                    cardNumberCell = WTCardDataInputCell(style: .default, reuseIdentifier: reuseId)
+                    cardNumberCell?.title = String.localized("WT.Card.Info.Number")
+                    cardNumberCell?.inputCount = 4
+                    cardNumberCell?.onChange = self.onChange
+                    cardNumberCell?.onNext = { [unowned self] (field) in
+                        if self.cardCVV2Cell?.fields[0].text?.characters.count == 4 {
+                            field.resignFirstResponder()
+                        } else {
+                            self.cardCVV2Cell?.fields[0].becomeFirstResponder()
+                        }
+                    }
+                    cell = cardNumberCell
                 } else if indexPath.row == 1 {
-                    
+                    cardCVV2Cell = WTCardDataInputCell(style: .default, reuseIdentifier: reuseId)
+                    cardCVV2Cell?.title = String.localized("WT.Card.Info.CVV2")
+                    cardCVV2Cell?.inputCount = 1
+                    cardCVV2Cell?.onChange = self.onChange
+                    cardCVV2Cell?.onNext = { [unowned self] (field) in
+                        if self.cardDateCell?.fields[1].text?.characters.count == 2 {
+                            if self.cardDateCell?.fields[0].text?.characters.count == 2 {
+                                field.resignFirstResponder()
+                            } else {
+                                self.cardDateCell?.fields[0].becomeFirstResponder()
+                            }
+                        } else {
+                            self.cardDateCell?.fields[1].becomeFirstResponder()
+                        }
+                    }
+                    cardCVV2Cell?.onPrevious = { [unowned self] (field) in
+                        self.cardNumberCell?.fields[0].becomeFirstResponder()
+                    }
+                    cell = cardCVV2Cell
                 } else { // 2
-                    
+                    cardDateCell = WTCardDataInputCell(style: .default, reuseIdentifier: reuseId)
+                    cardDateCell?.title = String.localized("WT.Card.Info.ExpireDate")
+                    cardDateCell?.inputCount = 2
+                    cardDateCell?.inputLimit = 2
+                    cardDateCell?.fields[0].placeholder = String.localized("WT.Card.Info.ExpireDate.Year")
+                    cardDateCell?.fields[1].placeholder = String.localized("WT.Card.Info.ExpireDate.Month")
+                    cardDateCell?.bottomBar.opacity = 0
+                    cardDateCell?.onChange = self.onChange
+                    cardDateCell?.onNext = { [unowned self] (field) in
+                        field.resignFirstResponder()
+                    }
+                    cardDateCell?.onPrevious = { [unowned self] (field) in
+                        self.cardCVV2Cell?.fields[0].becomeFirstResponder()
+                    }
+                    cell = cardDateCell
                 }
-                cell = WTCardDataInputCell(style: .default, reuseIdentifier: reuseId)
             }
             
         }

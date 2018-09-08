@@ -10,13 +10,15 @@ import UIKit
 import UIColor_Hex_Swift
 
 struct WTCardPreviewValues {
-    let cardNumber: String
-    let expDate: String
-    let cvv2: String
+    var cardNumber: String
+    var expDate: String
+    var cvv2: String
     var type: WTBankCardStyleType {
         let num = cardNumber.replacingOccurrences(of: " ", with: "")
         for (key, value) in WTBankCardStyles {
-            if num.starts(with: value.code) {
+            print(num)
+            print(value.code)
+            if num.starts(with: value.code.localizedFormat) {
                 return key
             }
         }
@@ -40,17 +42,21 @@ class WTCardPreviewCell: UITableViewCell {
     let cardNo: UILabel = UILabel()
     
     var values: WTCardPreviewValues =
-        WTCardPreviewValues(cardNumber: "6037     6974     XXXX     XXXX",
-                            expDate: "97/18", cvv2: "1336")
+        WTCardPreviewValues(cardNumber: "XXXX     XXXX     XXXX     XXXX",
+                            expDate: "-/-", cvv2: "-") {
+        didSet {bankTypeSet()}
+    }
     
     func bankTypeSet(){
         let style: WTBankCardStyle = WTBankCardStyles[values.type]!
         self.gradientLayer.colors = [ UIColor(style.left).cgColor, UIColor(style.right).cgColor ]
         UIView.animate(withDuration: 0.1) { [unowned self] () in
             if self.values.type == .none {
+                print("NONE?")
                 self.logo.alpha = 0
                 self.name.alpha = 0
             } else {
+                print("NONE!")
                 self.logo.alpha = 1
                 self.name.alpha = 1
             }

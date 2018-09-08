@@ -61,7 +61,6 @@
 		3D7F164021429A7F0011490A /* WTAddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F163F21429A7F0011490A /* WTAddCardViewController.swift */; };
 		3D7F16452142C2C40011490A /* WTCardPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F16442142C2C40011490A /* WTCardPreviewCell.swift */; };
 		3D7F16482142C2DE0011490A /* WTCardDataInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F16472142C2DE0011490A /* WTCardDataInputCell.swift */; };
-		3D7F164A2142C3C20011490A /* WTCardDataDateInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F16492142C3C20011490A /* WTCardDataDateInputCell.swift */; };
 		74CC57EBA451321E368A1D4B /* Pods_Wallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6A274463AD65084919ACBB /* Pods_Wallet.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,7 +121,6 @@
 		3D7F163F21429A7F0011490A /* WTAddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTAddCardViewController.swift; sourceTree = "<group>"; };
 		3D7F16442142C2C40011490A /* WTCardPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTCardPreviewCell.swift; sourceTree = "<group>"; };
 		3D7F16472142C2DE0011490A /* WTCardDataInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTCardDataInputCell.swift; sourceTree = "<group>"; };
-		3D7F16492142C3C20011490A /* WTCardDataDateInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTCardDataDateInputCell.swift; sourceTree = "<group>"; };
 		6C6A274463AD65084919ACBB /* Pods_Wallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EDD7E6FC0734C2B699715D /* Pods-Wallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wallet/Pods-Wallet.debug.xcconfig"; sourceTree = "<group>"; };
 		C1D7D2986CD44CE308340D37 /* Pods-Wallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wallet/Pods-Wallet.release.xcconfig"; sourceTree = "<group>"; };
@@ -342,7 +340,6 @@
 				3D7F16222141DB780011490A /* WTCardHeaderCell.swift */,
 				3D7F16442142C2C40011490A /* WTCardPreviewCell.swift */,
 				3D7F16472142C2DE0011490A /* WTCardDataInputCell.swift */,
-				3D7F16492142C3C20011490A /* WTCardDataDateInputCell.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -496,6 +493,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Wallet/Pods-Wallet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PersianDatePicker/PersianDatePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -505,6 +503,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PersianDatePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -553,7 +552,6 @@
 				3D7F164021429A7F0011490A /* WTAddCardViewController.swift in Sources */,
 				2290E8252142F0B300662C7C /* WTSimpleFactorCell.swift in Sources */,
 				3D3B79922142EE87007B2F01 /* HideKB+UIViewController.swift in Sources */,
-				3D7F164A2142C3C20011490A /* WTCardDataDateInputCell.swift in Sources */,
 				3D7F160521417D130011490A /* WTColor.swift in Sources */,
 				3D7F16272141DEE70011490A /* Number+Seperator.swift in Sources */,
 				2290E8182142DCF000662C7C /* WTWalletViewController.swift in Sources */,

@@ -25,4 +25,8 @@
 "WT.Card.BankName.mellat" = "ملت";
 "WT.Card.BankName.parsian" = "پارسیان";
 "WT.Card.BankName.none" = "ناشناخته";
-
+"WT.Card.Info.Number" = "شماره کارت";
+"WT.Card.Info.ExpireDate" = "تاریخ انقضا";
+"WT.Card.Info.CVV2" = "کد امنیتی CVV2";
+"WT.Card.Info.ExpireDate.Year" = "سال";
+"WT.Card.Info.ExpireDate.Month" = "ماه";
