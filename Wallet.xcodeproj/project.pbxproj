@@ -14,6 +14,7 @@
 		2290E8212142EA4800662C7C /* WTGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E8202142EA4800662C7C /* WTGridLayout.swift */; };
 		2290E8232142EAC200662C7C /* WTWalletServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E8222142EAC200662C7C /* WTWalletServiceCell.swift */; };
 		2290E8252142F0B300662C7C /* WTSimpleFactorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E8242142F0B300662C7C /* WTSimpleFactorCell.swift */; };
+		2290E8282143204600662C7C /* WTServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290E8272143204600662C7C /* WTServiceCell.swift */; };
 		3D3B79922142EE87007B2F01 /* HideKB+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3B79912142EE87007B2F01 /* HideKB+UIViewController.swift */; };
 		3D6B34AB21415629009098F0 /* WTAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6B34AA21415629009098F0 /* WTAppDelegate.swift */; };
 		3D6B34BD21415DFB009098F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6B34BC21415DFB009098F0 /* LaunchScreen.xib */; };
@@ -41,7 +42,7 @@
 		3D7F160C21419E770011490A /* Instances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F160B21419E770011490A /* Instances.swift */; };
 		3D7F160E2141A7B10011490A /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F160D2141A7B10011490A /* CALayer.swift */; };
 		3D7F16102141B6850011490A /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F160F2141B6850011490A /* UIImage+Color.swift */; };
-		3D7F16132141BB2F0011490A /* WTProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F16122141BB2F0011490A /* WTProfileViewController.swift */; };
+		3D7F16132141BB2F0011490A /* WTServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F16122141BB2F0011490A /* WTServiceViewController.swift */; };
 		3D7F16162141BCAA0011490A /* WTCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F16152141BCAA0011490A /* WTCardsViewController.swift */; };
 		3D7F16192141D2360011490A /* fa.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D7F16182141D2360011490A /* fa.strings */; };
 		3D7F161C2141D7A00011490A /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F161B2141D7A00011490A /* String+Localization.swift */; };
@@ -72,6 +73,7 @@
 		2290E8202142EA4800662C7C /* WTGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTGridLayout.swift; sourceTree = "<group>"; };
 		2290E8222142EAC200662C7C /* WTWalletServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTWalletServiceCell.swift; sourceTree = "<group>"; };
 		2290E8242142F0B300662C7C /* WTSimpleFactorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTSimpleFactorCell.swift; sourceTree = "<group>"; };
+		2290E8272143204600662C7C /* WTServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTServiceCell.swift; sourceTree = "<group>"; };
 		3D3B79912142EE87007B2F01 /* HideKB+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HideKB+UIViewController.swift"; sourceTree = "<group>"; };
 		3D6B34A721415629009098F0 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6B34AA21415629009098F0 /* WTAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTAppDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +103,7 @@
 		3D7F160B21419E770011490A /* Instances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instances.swift; sourceTree = "<group>"; };
 		3D7F160D2141A7B10011490A /* CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		3D7F160F2141B6850011490A /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
-		3D7F16122141BB2F0011490A /* WTProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTProfileViewController.swift; sourceTree = "<group>"; };
+		3D7F16122141BB2F0011490A /* WTServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTServiceViewController.swift; sourceTree = "<group>"; };
 		3D7F16152141BCAA0011490A /* WTCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTCardsViewController.swift; sourceTree = "<group>"; };
 		3D7F16182141D2360011490A /* fa.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = fa.strings; sourceTree = "<group>"; };
 		3D7F161B2141D7A00011490A /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
@@ -164,6 +166,14 @@
 				2290E81E2142E94600662C7C /* WTWalletServicesCell.swift */,
 				2290E8222142EAC200662C7C /* WTWalletServiceCell.swift */,
 				2290E8242142F0B300662C7C /* WTSimpleFactorCell.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		2290E8262143201600662C7C /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				2290E8272143204600662C7C /* WTServiceCell.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -239,7 +249,7 @@
 				2290E8162142DCA700662C7C /* Wallet */,
 				3D7F16322142589E0011490A /* Scan */,
 				3D7F16142141BC7D0011490A /* Cards */,
-				3D7F16112141BB100011490A /* Profile */,
+				3D7F16112141BB100011490A /* Service */,
 				3D6B34C421416B71009098F0 /* WTMainNavigationController.swift */,
 				3D6B34C621416B8F009098F0 /* WTMainTabBarController.swift */,
 			);
@@ -295,12 +305,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		3D7F16112141BB100011490A /* Profile */ = {
+		3D7F16112141BB100011490A /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				3D7F16122141BB2F0011490A /* WTProfileViewController.swift */,
+				2290E8262143201600662C7C /* Items */,
+				3D7F16122141BB2F0011490A /* WTServiceViewController.swift */,
 			);
-			path = Profile;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		3D7F16142141BC7D0011490A /* Cards */ = {
@@ -551,6 +562,7 @@
 				3D7F161F2141D9510011490A /* WTCardCozyCell.swift in Sources */,
 				3D7F164021429A7F0011490A /* WTAddCardViewController.swift in Sources */,
 				2290E8252142F0B300662C7C /* WTSimpleFactorCell.swift in Sources */,
+				2290E8282143204600662C7C /* WTServiceCell.swift in Sources */,
 				3D3B79922142EE87007B2F01 /* HideKB+UIViewController.swift in Sources */,
 				3D7F160521417D130011490A /* WTColor.swift in Sources */,
 				3D7F16272141DEE70011490A /* Number+Seperator.swift in Sources */,
@@ -567,7 +579,7 @@
 				3D6B34CA214170B4009098F0 /* WTNavigationController.swift in Sources */,
 				3D6B34CC214170CD009098F0 /* WTViewController.swift in Sources */,
 				3D7F1639214258F60011490A /* WTNFCViewController.swift in Sources */,
-				3D7F16132141BB2F0011490A /* WTProfileViewController.swift in Sources */,
+				3D7F16132141BB2F0011490A /* WTServiceViewController.swift in Sources */,
 				3D7F162F2141F3D10011490A /* WTCard.swift in Sources */,
 				3D7F161C2141D7A00011490A /* String+Localization.swift in Sources */,
 				3D6B34C521416B71009098F0 /* WTMainNavigationController.swift in Sources */,

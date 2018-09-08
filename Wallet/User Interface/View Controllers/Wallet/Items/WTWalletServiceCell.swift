@@ -33,5 +33,9 @@ class WTWalletServiceCell: UICollectionViewCell {
         let marginX: CGFloat = 7.5
         
         imageView.frame = CGRect(x: marginX, y: marginX, width: self.frame.size.width - 2 * marginX, height: self.frame.size.height - 2 * marginX)
+        print("=========")
+        print(self.frame)
+        print(imageView.frame)
+        print("=========")
     }
 }

@@ -53,7 +53,7 @@ class WTWalletViewController: WTViewController, UITableViewDelegate, UITableView
         case 2:
             return 1
         case 3:
-            return 0 //factors?.count ?? 5
+            return factors?.count ?? 5
         default:
             return 0
         }
@@ -65,7 +65,7 @@ class WTWalletViewController: WTViewController, UITableViewDelegate, UITableView
             return 80
         case 1:
             let rows = ((services?.count ?? 4) / 2 + (services?.count ?? 4) % 2)
-            return CGFloat(rows * 130)
+            return CGFloat(CGFloat(rows) * (self.view.frame.size.width / 2 * 0.69 + 15))
         case 2:
             return 50
         case 3:
@@ -95,10 +95,14 @@ class WTWalletViewController: WTViewController, UITableViewDelegate, UITableView
             }
             return cell!
         } else {
-            var cell: WTBalanceCell? = tableView.dequeueReusableCell(withIdentifier: WTBalanceCell.reuseIdentifier) as? WTBalanceCell
+            var cell: WTSimpleFactorCell? = tableView.dequeueReusableCell(withIdentifier: WTSimpleFactorCell.reuseIdentifier) as? WTSimpleFactorCell
             if cell == nil {
-                cell = WTBalanceCell()
+                cell = WTSimpleFactorCell()
             }
+            cell?.titleLabel.text = "آسیاتک"
+            cell?.valueLabel.text = "۲۷۰,۰۰۰ تومان"
+            cell?.detailLabel.text = "تمدید قرارداد اینترنت"
+            cell?.dateLabel.text = "۱۳۹۷/۳/۱۵"
             return cell!
         }
     }
