@@ -34,8 +34,8 @@ class WTMainTabBarController: UITabBarController {
         self.customTabBar.onSelect = { [unowned self] (index) in
             self.selectedIndex = index
         }
-        self.viewControllers = [WTMainNavigationController(rootViewController: WTServiceViewController()),
-                                WTMainNavigationController(),
+        self.viewControllers = [WTMainNavigationController(rootViewController: WTServicesViewController()),
+                                WTMainNavigationController(rootViewController: WTStocksViewController()),
                                 WTMainNavigationController(rootViewController: WTScanViewController()),
                                 WTMainNavigationController(rootViewController: WTWalletViewController()),
                                 WTMainNavigationController(rootViewController: WTCardsViewController())]

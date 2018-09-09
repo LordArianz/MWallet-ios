@@ -98,4 +98,36 @@ class WTColor {
         return UIColor(red: 208.0 / 255.0, green: 2.0 / 255.0, blue: 27.0 / 255.0, alpha: 1.0)
     }
     
+    @nonobjc class var wt_black: UIColor {
+        return UIColor.init(white: 0.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var wt_selectorBorder: UIColor {
+        return UIColor(white: 225.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var wt_stocksChartTop: UIColor {
+        return UIColor(red: 31.0 / 255.0, green: 40.0 / 255.0, blue: 45.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var wt_stocksChartBottom: UIColor {
+        return UIColor(red: 8.0 / 255.0, green: 8.0 / 255.0, blue: 9.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var wt_stocksSeperator: UIColor {
+        return UIColor.init(white: 0.0, alpha: 0.1)
+    }
+    
+    @nonobjc class var wt_stockPositive: UIColor {
+        return UIColor(red: 87.0 / 255.0, green: 156.0 / 255.0, blue: 9.0 / 255.0, alpha: 1.0)
+    }
+
+    @nonobjc class var wt_stockNegative: UIColor {
+        return UIColor(red: 208.0 / 255.0, green: 2.0 / 255.0, blue: 27.0 / 255.0, alpha: 1.0)
+    }
+
+    @nonobjc class var wt_stock: UIColor {
+        return UIColor(red: 175.0 / 255.0, green: 175.0 / 255.0, blue: 175.0 / 255.0, alpha: 1.0)
+    }
+
 }

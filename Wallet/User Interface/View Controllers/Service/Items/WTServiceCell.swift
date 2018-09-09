@@ -20,7 +20,7 @@ class WTServiceCell: UICollectionViewCell {
         self.backgroundColor = UIColor.clear
         
         rootView.backgroundColor = WTColor.wt_DarkCardText
-        rootView.setShadow(5, offset: CGSize(width: 0, height: 1), color: WTColor.wt_TabDeselectedTranslucent, alpha: 0.08)
+        rootView.setShadow(5, offset: CGSize(width: 0, height: 1), color: WTColor.wt_black, alpha: 0.08)
         rootView.setCorner(radius: 35)
         
         titleLabel.font = UIFont.get(.main, weight: .medium, size: 14)

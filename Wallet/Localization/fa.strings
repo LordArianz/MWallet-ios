@@ -8,7 +8,8 @@
 
 "WT.Tab.Cards" = "کارت ها";
 "WT.Tab.Wallet" = "کیف پول";
-"WT.Tab.Service" = "خدمات مشتری";
+"WT.Tab.Services" = "خدمات مشتری";
+"WT.Tab.Stocks" = "بورس";
 "WT.Currency" = "تومان";
 "WT.Scan.QRCode" = "QRCode";
 "WT.Scan.NFC" = "NFC";
@@ -31,3 +32,7 @@
 "WT.Card.Info.CVV2" = "کد امنیتی CVV2";
 "WT.Card.Info.ExpireDate.Year" = "سال";
 "WT.Card.Info.ExpireDate.Month" = "ماه";
+"WT.Stocks.Overview" = "وضعیت بازار";
+"WT.Stocks.Mine" = "سهام من";
+"WT.Tab.Profile" = "پروفایل";
+"WT.Navigation.Back" = "بازگشت";

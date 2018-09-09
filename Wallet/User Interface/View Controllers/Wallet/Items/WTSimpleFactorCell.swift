@@ -28,7 +28,7 @@ class WTSimpleFactorCell: UITableViewCell {
         rootView.setCorner(radius: 4)
         rootView.clipsToBounds = true
         rootView.layer.masksToBounds = true
-        rootView.setShadow(2, offset: CGSize(width: 0, height: 1), color: WTColor.wt_TabDeselectedTranslucent, alpha: 0.15)
+        rootView.setShadow(2, offset: CGSize(width: 0, height: 1), color: WTColor.wt_black, alpha: 0.15)
         tagLayer.backgroundColor = UIColor.red.cgColor
         
         innerView.backgroundColor = UIColor.clear

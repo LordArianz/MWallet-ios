@@ -32,7 +32,10 @@ class WTWalletViewController: WTViewController, UITableViewDelegate, UITableView
         self.setTitle(String.localized("WT.Tab.Wallet"))
         tableView.delegate = self
         tableView.dataSource = self
-
+        self.setleftItem(icon: "icon-tab-profile") { [unowned self] (addButton) in
+            print("addesh kon")
+            self.navigationController?.pushViewController(WTProfileViewController(), animated: true)
+        }
     }
 
     override func didReceiveMemoryWarning() {

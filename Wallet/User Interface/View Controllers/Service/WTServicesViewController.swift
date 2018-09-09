@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WTServiceViewController: WTViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class WTServicesViewController: WTViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var collectionView: UICollectionView!
     var layout: UICollectionViewFlowLayout!
@@ -31,7 +31,7 @@ class WTServiceViewController: WTViewController, UICollectionViewDelegate, UICol
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setTitle(String.localized("WT.Tab.Service"))
+        self.setTitle(String.localized("WT.Tab.Services"))
         collectionView.delegate = self
         collectionView.dataSource = self
         

@@ -9,17 +9,24 @@
 import UIKit
 
 struct WTSelectorItem {
-    let image: UIImage
+    let image: UIImage?
     let title: String
+}
+
+enum WTSelectorType {
+    case justLabel
+    case withImage
 }
 
 class WTSelectorItemView: UIView {
     let imageView: UIImageView = UIImageView()
     let label: UILabel = UILabel()
     let rootView: UIView = UIView()
+    var type: WTSelectorType!
     
-    init() {
+    init(_ type: WTSelectorType = .withImage) {
         super.init(frame: .zero)
+        self.type = type
         self.backgroundColor = WTColor.wt_TabDeselectedTranslucent
         imageView.contentMode = .scaleAspectFit
         rootView.addSubview(imageView)
@@ -35,13 +42,21 @@ class WTSelectorItemView: UIView {
         super.layoutSubviews()
         let imageSide: CGFloat = 24
         label.sizeToFit()
-        imageView.frame = CGRect(x: 0, y: 0, width: imageSide, height: imageSide)
-        /*rootView.frame.size = CGSize(width: imageSide + label.frame.size.width, height: imageSide)*/
-        label.frame.origin.x = imageSide + 5
-        rootView.frame.size = CGSize(width: imageSide + 5 + label.frame.size.width,
-                                     height: max(imageSide, label.frame.size.height))
-        label.center.y = rootView.frame.size.height / 2 + 3
-        rootView.center = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
+        switch self.type {
+        case .withImage:
+            imageView.frame = CGRect(x: 0, y: 0, width: imageSide, height: imageSide)
+            label.frame.origin.x = imageSide + 5
+            rootView.frame.size = CGSize(width: imageSide + label.frame.size.width,
+                                         height: max(imageSide, label.frame.size.height))
+            label.center.y = rootView.frame.size.height / 2 + 3
+            rootView.center = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
+        case .justLabel:
+            rootView.frame = self.bounds
+            label.sizeToFit()
+            label.center = rootView.center
+        default:
+            break
+        }
     }
 }
 
@@ -70,8 +85,8 @@ class WTSelector: UIView {
             subview.removeFromSuperview()
         }
         for item in items {
-            let view: WTSelectorItemView = WTSelectorItemView()
-            view.imageView.image = item.image.withRenderingMode(.alwaysTemplate)
+            let view: WTSelectorItemView = WTSelectorItemView(item.image == nil ? .justLabel : .withImage)
+            view.imageView.image = item.image?.withRenderingMode(.alwaysTemplate)
             view.label.text = item.title
             self.addSubview(view)
         }
@@ -81,13 +96,30 @@ class WTSelector: UIView {
     func indexChange() {
         for subview in self.subviews {
             let view: WTSelectorItemView = subview as! WTSelectorItemView
-            view.backgroundColor = WTColor.wt_TabDeselectedTranslucent
-            view.imageView.tintColor = WTColor.wt_DarkCardText
-            view.label.textColor = view.imageView.tintColor
-            view.label.font = UIFont.get(.round, weight: .bold, size: 22)
+            switch view.type {
+            case .withImage:
+                view.backgroundColor = WTColor.wt_TabDeselectedTranslucent
+                view.imageView.tintColor = WTColor.wt_DarkCardText
+                view.label.textColor = view.imageView.tintColor
+                view.label.font = UIFont.get(.round, weight: .bold, size: 22)
+            case .justLabel:
+                view.backgroundColor = WTColor.wt_DarkCardText
+                view.label.textColor = WTColor.wt_black
+                view.label.font = UIFont.get(.main, weight: .medium, size: 14)
+            default:
+                break
+            }
         }
         let view: WTSelectorItemView = subviews[currentIndex] as! WTSelectorItemView
         view.backgroundColor = WTColor.wt_TabSelected
+        switch view.type {
+        case .withImage:
+            break
+        case .justLabel:
+            view.label.textColor = WTColor.wt_DarkCardText
+        default:
+            break
+        }
         onSelect?(currentIndex)
     }
     
