@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WTServiceViewController: WTViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class WTServiceViewController: WTViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var collectionView: UICollectionView!
     var layout: UICollectionViewFlowLayout!
@@ -26,29 +26,12 @@ class WTServiceViewController: WTViewController, UICollectionViewDelegate, UICol
         collectionView.contentInset = UIEdgeInsetsMake(75, 0, 75, 0)
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = UIColor.clear
-//        self.view.addSubview(collectionView)
-        
-        for i in 0...4 {
-            let view: UIView = UIView()
-            view.layer.cornerRadius = 35
-            view.backgroundColor = UIColor.white
-            view.layer.setShadow(5, color: UIColor.black, opacity: 0.08, X: 0, Y: 1)
-            view.layer.masksToBounds = false
-            view.clipsToBounds = true
-            self.view.addSubview(view)
-            
-            let title: UILabel = UILabel()
-            title.text = titles?[i]
-            title.textColor = UIColor.black
-            title.font = UIFont.get(.main, weight: .medium, size: 14)
-            view.addSubview(title)
-        }
-        
+        self.view.addSubview(collectionView)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setTitle(String.localized("WT.Tab.Wallet"))
+        self.setTitle(String.localized("WT.Tab.Service"))
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -62,18 +45,12 @@ class WTServiceViewController: WTViewController, UICollectionViewDelegate, UICol
         super.viewDidLayoutSubviews()
         let w: CGFloat = 280
         collectionView.frame = CGRect(x: (self.view.frame.size.width - w) / 2, y: 0, width: w, height: self.view.frame.size.height)
-        print("CCCCC")
-        print(collectionView.frame)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 0 {
-            print("AAAAa")
-            print(CGSize(width: collectionView.frame.size.width / 2 - 1, height: collectionView.frame.size.width / 2 - 1))
             return CGSize(width: collectionView.frame.size.width / 2 - 1, height: collectionView.frame.size.width / 2 - 1)
         } else {
-            print("BBBBBB")
-            print(CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.width / 2 - 1))
             return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.width / 2 - 1)
         }
     }
@@ -90,6 +67,27 @@ class WTServiceViewController: WTViewController, UICollectionViewDelegate, UICol
         var cell: WTServiceCell? = collectionView.dequeueReusableCell(withReuseIdentifier: WTServiceCell.reuseIdentifier, for: indexPath) as? WTServiceCell
         if cell == nil {
             cell = WTServiceCell()
+        }
+        switch indexPath.row {
+        case 0:
+            if indexPath.section == 0 {
+                cell?.titleLabel.text = "شارژ"
+                cell?.imageView.image = UIImage(named: "icon-service-charge")
+            } else {
+                cell?.titleLabel.text = "گزارش ها"
+                cell?.imageView.image = UIImage(named: "icon-service-report")
+            }
+        case 1:
+            cell?.titleLabel.text = "جریمه خودرو"
+            cell?.imageView.image = UIImage(named: "icon-service-penalty")
+        case 2:
+            cell?.titleLabel.text = "طرح ترافیک"
+            cell?.imageView.image = UIImage(named: "icon-service-traffic")
+        case 3:
+            cell?.titleLabel.text = "پرداخت قبوض"
+            cell?.imageView.image = UIImage(named: "icon-service-bill")
+        default:
+            break
         }
         return cell!
     }

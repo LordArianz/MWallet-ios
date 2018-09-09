@@ -81,7 +81,7 @@ class WTCardsViewController: WTViewController, UITableViewDelegate, UITableViewD
         case 0:
             return 1
         case 1:
-            return cards?.count ?? 10
+            return cards?.count ?? 6
         default:
             return 0
         }
@@ -167,7 +167,7 @@ class WTCardsViewController: WTViewController, UITableViewDelegate, UITableViewD
             if mode == .cozy {
                 var cell: WTCardCozyCell? = tableView.dequeueReusableCell(withIdentifier: WTCardCozyCell.reuseIdentifier) as? WTCardCozyCell
                 if cell == nil {
-                    cell = WTCardCozyCell(.mellat)
+                    cell = WTCardCozyCell(indexPath.row % 3 == 0 ? .saderat : (indexPath.row % 3 == 1 ? .mellat : .parsian))
                 }
                 cell?.valueLabel.text = Int("435353")?.priceFormat
                 cell?.numLabel.text = "****  ****  ***4  3257".localizedFormat
@@ -175,7 +175,7 @@ class WTCardsViewController: WTViewController, UITableViewDelegate, UITableViewD
             } else {
                 var cell: WTCardCompactCell? = tableView.dequeueReusableCell(withIdentifier: WTCardCompactCell.reuseIdentifier) as? WTCardCompactCell
                 if cell == nil {
-                    cell = WTCardCompactCell(.mellat)
+                    cell = WTCardCompactCell(indexPath.row % 3 == 0 ? .saderat : (indexPath.row % 3 == 1 ? .mellat : .parsian))
                 }
                 cell?.numLabel.text = "****  ****  ***4  3259".localizedFormat
                 return cell!

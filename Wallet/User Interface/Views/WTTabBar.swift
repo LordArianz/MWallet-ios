@@ -68,7 +68,7 @@ class WTTabBar: UIView {
     func setNotifications() {
         var index: Int = 0
         for subview in container.subviews {
-            print("wow")
+            //print("wow")
             let view: WTTabBarButton = subview as! WTTabBarButton
             view.notificationLayer.opacity = notifications.contains(index) ? 1 : 0
             index += 1
@@ -119,16 +119,16 @@ class WTTabBar: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         var containerHeight: CGFloat = self.frame.size.height
-        print("now \(containerHeight)")
+        //print("now \(containerHeight)")
         if #available(iOS 11.0, *) {
             containerHeight -= AppDelegate.window!.safeAreaInsets.bottom
-            print("now after \(containerHeight)")
+            //print("now after \(containerHeight)")
         }
         container.frame = CGRect(x: 0, y: 0,
                                  width: self.frame.size.width,
                                  height: containerHeight)
         let width: CGFloat = self.frame.size.width / CGFloat(buttons.count)
-        print(width)
+        //print(width)
         var x: CGFloat = 0
         for subview in container.subviews {
             subview.frame = CGRect(x: x, y: 0, width: width, height: containerHeight)

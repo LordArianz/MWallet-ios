@@ -46,12 +46,9 @@ class WTWalletServicesCell: UITableViewCell, UICollectionViewDelegate, UICollect
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let marginX: CGFloat = 0
-        //collectionView.frame = CGRect(x: marginX, y: 0, width: self.frame.size.width - 2 * marginX, height: self.frame.size.height)
         collectionView.frame = self.bounds
-        let h: CGFloat = collectionView.frame.size.width / 2 * 11 / 16
+        let h: CGFloat = collectionView.frame.size.width * 0.325
         collectionView.collectionViewLayout = WTGridLayout(numberOfColumns: 2, itemHeight: h)
-
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -67,6 +64,7 @@ class WTWalletServicesCell: UITableViewCell, UICollectionViewDelegate, UICollect
         if cell == nil {
             cell = WTWalletServiceCell()
         }
+        cell?.setIsRight(indexPath.row % 2 == 1)
         cell?.imageView.image = UIImage(named: "icon-wallet-service\(indexPath.row)")
         return cell!
     }

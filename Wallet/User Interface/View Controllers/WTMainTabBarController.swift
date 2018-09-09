@@ -25,7 +25,7 @@ class WTMainTabBarController: UITabBarController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
         self.view.backgroundColor = WTColor.wt_MainBackground
-        self.customTabBar.buttons = [UIImage(named: "icon-tab-profile")!,
+        self.customTabBar.buttons = [UIImage(named: "icon-tab-services")!,
                                      UIImage(named: "icon-tab-stocks")!,
                                      UIImage(named: "icon-tab-scan")!,
                                      UIImage(named: "icon-tab-wallet")!,
@@ -33,9 +33,8 @@ class WTMainTabBarController: UITabBarController {
         self.customTabBar.notifications = [0]
         self.customTabBar.onSelect = { [unowned self] (index) in
             self.selectedIndex = index
-            print("hola amigos")
         }
-        self.viewControllers = [WTMainNavigationController(),
+        self.viewControllers = [WTMainNavigationController(rootViewController: WTServiceViewController()),
                                 WTMainNavigationController(),
                                 WTMainNavigationController(rootViewController: WTScanViewController()),
                                 WTMainNavigationController(rootViewController: WTWalletViewController()),

@@ -65,7 +65,7 @@ class WTWalletViewController: WTViewController, UITableViewDelegate, UITableView
             return 80
         case 1:
             let rows = ((services?.count ?? 4) / 2 + (services?.count ?? 4) % 2)
-            return CGFloat(CGFloat(rows) * (self.view.frame.size.width / 2 * 0.69 + 15))
+            return CGFloat(CGFloat(rows) * (self.view.frame.size.width * 0.325))
         case 2:
             return 50
         case 3:

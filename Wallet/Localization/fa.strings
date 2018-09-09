@@ -8,6 +8,7 @@
 
 "WT.Tab.Cards" = "کارت ها";
 "WT.Tab.Wallet" = "کیف پول";
+"WT.Tab.Service" = "خدمات مشتری";
 "WT.Currency" = "تومان";
 "WT.Scan.QRCode" = "QRCode";
 "WT.Scan.NFC" = "NFC";

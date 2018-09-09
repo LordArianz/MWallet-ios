@@ -16,6 +16,7 @@ class WTCardCozyCell: UITableViewCell {
     var valueLabel: UILabel!
     var numLabel: UILabel!
     var bankLogo: UIImageView!
+    var patternView: UIImageView!
     
     var style: WTBankCardStyleType {
         didSet { setStyle() }
@@ -25,8 +26,10 @@ class WTCardCozyCell: UITableViewCell {
         let styleVar: WTBankCardStyle = WTBankCardStyles[style]!
         gradientLayer.colors = [UIColor(styleVar.left).cgColor, UIColor(styleVar.right).cgColor]
         let iconName: String = "icon-bank-card-\(style.rawValue)"
-        print(iconName)
+        let patternName: String = "icon-\(style.rawValue)-pattern-easter"
+        //print(iconName)
         bankLogo.image = UIImage(named: iconName)
+        patternView.image = UIImage(named: patternName)
     }
     
     init(_ style: WTBankCardStyleType) {
@@ -57,6 +60,10 @@ class WTCardCozyCell: UITableViewCell {
         numLabel.font = UIFont.get(.mainFaNum, weight: .regular, size: 20)
         numLabel.textAlignment = .right
         
+        patternView = UIImageView()
+        patternView.contentMode = .topLeft
+        
+        rootView.addSubview(patternView)
         rootView.addSubview(bankLogo)
         rootView.addSubview(numLabel)
         rootView.addSubview(valueLabel)
@@ -89,6 +96,7 @@ class WTCardCozyCell: UITableViewCell {
         numLabel.frame = CGRect(x: paddingX, y: rootView.frame.size.height - numLabel.frame.size.height - 10, width: rootView.frame.size.width - 2 * paddingX, height: numLabel.frame.size.height)
         let imageSide: CGFloat = 30
         bankLogo.frame = CGRect(x: rootView.frame.size.width - paddingX - imageSide, y: paddingX, width: imageSide, height: imageSide)
+        patternView.frame = CGRect(x: 0, y: 0, width: rootView.frame.size.width * 2 / 3, height: rootView.frame.size.height)
     }
 
 }

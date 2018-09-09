@@ -12,7 +12,7 @@ PODS:
   - UIColor_Hex_Swift (4.0.2)
 
 DEPENDENCIES:
-  - PersianDatePicker
+  - PersianDatePicker (~> 0.7.0)
   - QRCodeReader.swift (~> 8.2.0)
   - RealmSwift (~> 3.7.6)
   - RxCocoa (~> 4.2.0)
@@ -38,6 +38,6 @@ SPEC CHECKSUMS:
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   UIColor_Hex_Swift: 2fb123c7d864994a5137ef57c4dc55e17a657d29
 
-PODFILE CHECKSUM: 4f6bd7e590fdb7552dba0dcbc25073bf12110f18
+PODFILE CHECKSUM: 2c1a8b477ab9abead857c3df13ca76a6800256a0
 
 COCOAPODS: 1.5.3
